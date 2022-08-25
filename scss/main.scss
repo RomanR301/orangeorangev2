@@ -8,25 +8,31 @@
   font-family: "PlusJakartaSans";
   font-display: swap;
   src: url("../fonts/PlusJakartaSans-Semibold.woff2") format("woff2");
-  font-weight: 700;
+  font-weight: 600;
 }
 @font-face {
   font-family: "PlusJakartaSans";
   font-display: swap;
   src: url("../fonts/PlusJakartaSans-Medium.woff2") format("woff2");
-  font-weight: 700;
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Gilroy";
+  font-display: swap;
+  src: url("../fonts/Gilroy-Medium.woff2") format("woff2");
+  font-weight: 500;
 }
 @font-face {
   font-family: "PlusJakartaSans";
   font-display: swap;
   src: url("../fonts/PlusJakartaSans-Regular.woff2") format("woff2");
-  font-weight: 700;
+  font-weight: 400;
 }
 @font-face {
   font-family: "PlusJakartaSans";
   font-display: swap;
   src: url("../fonts/PlusJakartaSans-Light.woff2") format("woff2");
-  font-weight: 700;
+  font-weight: 300;
 }
 
 
@@ -137,7 +143,7 @@ video {
   padding: 0;
   border: 0;
   font-size: 100%;
-  font-family: "Inter", sans-serif;
+  font-family: "PlusJakartaSans", sans-serif;
   color: $text;
   font-weight: 400;
   vertical-align: baseline;
@@ -150,10 +156,11 @@ body {
   background-image: url('../img/bg.png');
   background-size: cover;
   color: $text;
-  font-family: "Inter", sans-serif;
+  font-family: "PlusJakartaSans", sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.55;
+  letter-spacing: -0.6%;
 }
 
 .no-focus-outline a:focus,
@@ -300,7 +307,133 @@ input[type="number"] {
   }
 }
 
+@-webkit-keyframes rotation {
+		from {
+				-webkit-transform: rotate(0deg);
+		}
+		to {
+				-webkit-transform: rotate(359deg);
+		}
+}
 
-main {
-  margin: 100px 0;
+
+.header {
+  padding: 34px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  &-logo {
+    display: flex;
+  }
+  .container {
+    max-width: 1590px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .hamburger {
+    display: block;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    span {
+      background: $text;
+      width: 40px;
+      height: 2px;
+      right: 0;
+      display: block;
+      position: absolute;
+      transition: all 0.3s ease-in-out;
+      &:nth-child(1) {
+        top: 10px;
+      }
+      &:nth-child(2) {
+        width: 33px;
+        top: 50%;
+        transform: translate(0, -50%);
+      }
+      &:nth-child(3) {
+        width: 33px;
+        top: 50%;
+        transform: translate(0, -50%);
+      }
+      &:nth-child(4) {
+        bottom: 10px;
+      }
+    }
+    &.active {
+      .span {
+        &:nth-child(1) {
+          width: 0;
+          right: 50%;
+          opacity: 0;
+        }
+        &:nth-child(2) {
+          transform: rotate(45deg);
+        }
+        &:nth-child(3) {
+          transform: rotate(135deg);
+        }
+        &:nth-child(4) {
+          width: 0;
+          left: 50%;
+          opacity: 0;
+        }
+      }
+    }
+  }
+}
+
+.hero-screen {
+  padding: 178px 0 35px 0;
+  border-bottom: 1px solid $black;
+  .container {
+    position: relative;
+  }
+  &-cta {
+    position: absolute;
+    bottom: 70px;
+    right: 0;
+    display: flex;
+    -webkit-animation: rotation 12s infinite linear;
+  }
+  &-subtitle {
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 20px;
+  }
+  &-title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    .title-item {
+      cursor: pointer;
+      position: relative;
+      width: 100%;
+      height: 150px;
+      &:hover {
+        .default {
+          opacity: 0;
+        }
+        .hover {
+          opacity: 1;
+        }
+      }
+    }
+    img {
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+      left: 0;
+      transition: all .3s ease-in-out;
+    }
+    .hover {
+      opacity: 0;
+    }
+    img, svg {
+      margin-bottom: 50px;
+    }
+  }
 }
