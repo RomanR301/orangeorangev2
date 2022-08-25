@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     var scroller = {
     target: document.querySelector("#scroll-container"),
-    ease: 0.03, // <= scroll speed
+    ease: 0.05, // <= scroll speed
     endY: 0,
     y: 0,
     resizeRequest: 1,
@@ -71,35 +71,43 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }
     }
 
-    const options = {
-      root: null,
-      rootMargin: "0px",
-      threshold: 0.4
-    };
-  
-    // IMAGE ANIMATION
-  
-    let revealCallback = (entries) => {
-      entries.forEach((entry) => {
-        let container = entry.target;
-  
-        if (entry.isIntersecting) {
-          console.log(container);
-          container.classList.add("animating");
-          return;
-        }
-      });
-    };
-  
-    let revealObserver = new IntersectionObserver(revealCallback, options);
-  
-    document.querySelectorAll(".reveal").forEach((reveal) => {
-      revealObserver.observe(reveal);
-    });
 
-    var rellax = new Rellax('.rellax', {
-      center: true,
-      vertical: true,
-      horizontal: false
-    });
+
+    // END SMOOTH SCROLL
+
+
+
 })
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const options = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.4
+  };
+
+  // IMAGE ANIMATION
+
+  let revealCallback = (entries) => {
+    entries.forEach((entry) => {
+      let container = entry.target;
+
+      if (entry.isIntersecting) {
+        console.log(container);
+        container.classList.add("animating");
+        return;
+      }
+    });
+  };
+
+  let revealObserver = new IntersectionObserver(revealCallback, options);
+
+  document.querySelectorAll(".reveal").forEach((reveal) => {
+    revealObserver.observe(reveal);
+  });
+
+  // TEXT ANIMATION
+
+});
