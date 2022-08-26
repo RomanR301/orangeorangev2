@@ -194,8 +194,7 @@ body {
   width: 100%;
   transform-style: preserve-3d;
 }
-
-// image reveal animation
+// IMAGE REVEAL ANIMATION
 .reveal {
   transform: rotate(180deg);
 }
@@ -215,6 +214,55 @@ body:not(.no-js) .animating .image-wrap {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   visibility: visible;
   transform: skewY(0);
+}
+// TEXT REVEAL ANIMATION
+
+.text-reveal {
+  overflow: hidden;
+  line-height: 1;
+  padding: 50px 0;
+  span {
+    display: block;
+    transform: translateY(130%);
+  }
+  &.fading-up {
+    span {
+      transform: translateY(0);
+      transition: 1.5s cubic-bezier(0.77, 0, 0.175, 1) 0.5s;
+    }
+  }
+}
+
+@keyframes reveal {
+  0% {
+    transform: translate(0,100%);
+  }
+  100% {
+    transform: translate(0,0);
+  }
+}
+
+.hero-screen-title {
+  .title-item {
+    width: 100%!important;
+    overflow: hidden;
+    img {
+      display: block;
+      animation: reveal 1.5s cubic-bezier(0.77, 0, 0.175, 1) 0.5s;
+    }
+    &-1 {
+      
+    }
+    &-2{
+
+    }
+    &-3 {
+
+    }
+    &-4 {
+
+    }
+  }
 }
 
 
@@ -368,7 +416,16 @@ input[type="number"] {
     bottom: 70px;
     right: 0;
     display: flex;
+    animation: rotation 12s infinite linear;
     -webkit-animation: rotation 12s infinite linear;
+    img {
+      transition: all .3s ease-in-out;
+    }
+    &:hover {
+      img {
+        transform: scale(1.15);
+      }
+    }
   }
   &-subtitle {
     font-size: 24px;
@@ -384,6 +441,7 @@ input[type="number"] {
       position: relative;
       width: auto;
       height: 150px;
+      display: block;
       &:hover {
         .default {
           opacity: 0;
@@ -418,11 +476,13 @@ input[type="number"] {
     font-size: 32px;
     line-height: 50px;
   }
+  .text-reveal {
+    margin-bottom: 100px;
+  }
   &__title {
     font-weight: 300;
     font-size: 100px;
     line-height: 150px;
-    margin-bottom: 100px;
   }
   &-list {
     .case-item:nth-child(even) {
@@ -432,8 +492,8 @@ input[type="number"] {
       }
     }
   }
-  &-category {
-    margin-bottom: 400px;
+  &-category { 
+    margin-bottom: 200px;
   }
 }
 
@@ -441,7 +501,7 @@ input[type="number"] {
   &-item {
     display: flex;
     align-items: center;
-    margin-bottom: 200px;
+    margin-bottom: 100px;
     &-info {
       width: 50%;
       padding: 0 120px 0 0;
@@ -504,29 +564,24 @@ input[type="number"] {
     a {
       display: block;
       position: relative;
+      overflow: hidden;
       &:before {
         content: '';
+        position: absolute;
         width: 100%;
+        transform: scaleX(0);
         height: 3px;
-        background-color: $text;
-        position: absolute;
         bottom: 0;
         left: 0;
-        transition: all .3s ease-in-out;
-      }
-      &:after {
-        content: '';
-        width: 0%;
-        height: 3px;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        transition: all .3s ease-in-out;
-        background: linear-gradient(63.25deg, #FFE32A -5.4%, #FFAA00 40.94%, #FF4700 86.29%);
+        background: currentcolor;
+        transition: transform 0.4s ease-in-out; 
+        transform: scaleX(1);
+        transform-origin: bottom left;
       }
       &:hover {
-        &:after {
-          width: 100%;
+        &:before {
+          transform: scaleX(0);
+          transform-origin: bottom right;
         }
       }
     }
@@ -540,27 +595,21 @@ input[type="number"] {
     position: relative;
     &:before {
       content: '';
+      position: absolute;
       width: 100%;
+      transform: scaleX(0);
       height: 1px;
-      background-color: $text;
-      position: absolute;
       bottom: 0;
       left: 0;
-      transition: all .3s ease-in-out;
-    }
-    &:after {
-      content: '';
-      width: 0%;
-      height: 1px;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      transition: all .3s ease-in-out;
-      background: linear-gradient(63.25deg, #FFE32A -5.4%, #FFAA00 40.94%, #FF4700 86.29%);
+      background: currentcolor;
+      transition: transform 0.4s ease-in-out; 
+      transform: scaleX(1);
+      transform-origin: bottom left;
     }
     &:hover {
-      &:after {
-        width: 100%;
+      &:before {
+        transform: scaleX(0);
+        transform-origin: bottom right;
       }
     }
   }
@@ -571,17 +620,20 @@ input[type="number"] {
       position: relative;
       &:before {
         content: '';
-        width: 0%;
-        height: 1px;
-        background-color: $text;
         position: absolute;
-        bottom: 0;
+        width: 100%;
+        transform: scaleX(0);
+        height: 1px;
+        bottom: -2px;
         left: 0;
-        transition: all .3s ease-in-out;
+        background: currentcolor;
+        transform-origin: bottom right;
+        transition: transform 0.4s ease-in-out; 
       }
       &:hover {
         &:before {
-          width: 100%;
+          transform: scaleX(1);
+          transform-origin: bottom left;
         }
       }
     }

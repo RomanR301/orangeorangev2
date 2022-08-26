@@ -218,6 +218,58 @@ body:not(.no-js) .animating .image-wrap {
           transform: skewY(0);
 }
 
+.text-reveal {
+  overflow: hidden;
+  line-height: 1;
+  padding: 50px 0;
+}
+
+.text-reveal span {
+  display: block;
+  -webkit-transform: translateY(130%);
+          transform: translateY(130%);
+}
+
+.text-reveal.fading-up span {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: 1.5s cubic-bezier(0.77, 0, 0.175, 1) 0.5s;
+  transition: 1.5s cubic-bezier(0.77, 0, 0.175, 1) 0.5s;
+}
+
+@-webkit-keyframes reveal {
+  0% {
+    -webkit-transform: translate(0, 100%);
+            transform: translate(0, 100%);
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+}
+
+@keyframes reveal {
+  0% {
+    -webkit-transform: translate(0, 100%);
+            transform: translate(0, 100%);
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+}
+
+.hero-screen-title .title-item {
+  width: 100% !important;
+  overflow: hidden;
+}
+
+.hero-screen-title .title-item img {
+  display: block;
+  -webkit-animation: reveal 1.5s cubic-bezier(0.77, 0, 0.175, 1) 0.5s;
+          animation: reveal 1.5s cubic-bezier(0.77, 0, 0.175, 1) 0.5s;
+}
+
 a {
   text-decoration: none;
 }
@@ -399,7 +451,18 @@ input[type="number"] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  animation: rotation 12s infinite linear;
   -webkit-animation: rotation 12s infinite linear;
+}
+
+.hero-screen-cta img {
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.hero-screen-cta:hover img {
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
 }
 
 .hero-screen-subtitle {
@@ -426,6 +489,7 @@ input[type="number"] {
   position: relative;
   width: auto;
   height: 150px;
+  display: block;
 }
 
 .hero-screen-title .title-item:hover .default {
@@ -463,11 +527,14 @@ input[type="number"] {
   line-height: 50px;
 }
 
+.cases .text-reveal {
+  margin-bottom: 100px;
+}
+
 .cases__title {
   font-weight: 300;
   font-size: 100px;
   line-height: 150px;
-  margin-bottom: 100px;
 }
 
 .cases-list .case-item:nth-child(even) {
@@ -482,7 +549,7 @@ input[type="number"] {
 }
 
 .cases-category {
-  margin-bottom: 400px;
+  margin-bottom: 200px;
 }
 
 .case-item {
@@ -492,7 +559,7 @@ input[type="number"] {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 200px;
+  margin-bottom: 100px;
 }
 
 .case-item-info {
@@ -577,34 +644,34 @@ input[type="number"] {
 .footer-cta a {
   display: block;
   position: relative;
+  overflow: hidden;
 }
 
 .footer-cta a:before {
   content: '';
-  width: 100%;
-  height: 3px;
-  background-color: #222222;
   position: absolute;
+  width: 100%;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  height: 3px;
   bottom: 0;
   left: 0;
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
+  background: currentcolor;
+  -webkit-transition: -webkit-transform 0.4s ease-in-out;
+  transition: -webkit-transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
 }
 
-.footer-cta a:after {
-  content: '';
-  width: 0%;
-  height: 3px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
-  background: linear-gradient(63.25deg, #FFE32A -5.4%, #FFAA00 40.94%, #FF4700 86.29%);
-}
-
-.footer-cta a:hover:after {
-  width: 100%;
+.footer-cta a:hover:before {
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
 }
 
 .footer-contacts {
@@ -625,30 +692,29 @@ input[type="number"] {
 
 .footer .footer-email:before {
   content: '';
-  width: 100%;
-  height: 1px;
-  background-color: #222222;
   position: absolute;
+  width: 100%;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  height: 1px;
   bottom: 0;
   left: 0;
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
+  background: currentcolor;
+  -webkit-transition: -webkit-transform 0.4s ease-in-out;
+  transition: -webkit-transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
 }
 
-.footer .footer-email:after {
-  content: '';
-  width: 0%;
-  height: 1px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
-  background: linear-gradient(63.25deg, #FFE32A -5.4%, #FFAA00 40.94%, #FF4700 86.29%);
-}
-
-.footer .footer-email:hover:after {
-  width: 100%;
+.footer .footer-email:hover:before {
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
 }
 
 .footer-links__item {
@@ -660,17 +726,26 @@ input[type="number"] {
 
 .footer-links__item:before {
   content: '';
-  width: 0%;
-  height: 1px;
-  background-color: #222222;
   position: absolute;
-  bottom: 0;
+  width: 100%;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  height: 1px;
+  bottom: -2px;
   left: 0;
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
+  background: currentcolor;
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+  -webkit-transition: -webkit-transform 0.4s ease-in-out;
+  transition: -webkit-transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
 }
 
 .footer-links__item:hover:before {
-  width: 100%;
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
 }
 /*# sourceMappingURL=main.css.map */
