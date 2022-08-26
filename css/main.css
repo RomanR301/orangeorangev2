@@ -138,6 +138,7 @@ video {
 
 body {
   background-color: #f4f4f4;
+  background-image: url("../img/bg.png");
   background-size: contain;
   background-repeat: repeat;
   color: #222222;

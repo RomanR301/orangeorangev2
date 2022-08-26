@@ -9,8 +9,8 @@
   </head>
   <!DOCTYPE html>
   <body>
-    <main class="viewport">
-      <div class="scroll-container" id="scroll-container">
+    <!-- <main class="viewport">
+      <div class="scroll-container" id="scroll-container"> -->
         <header class="header">
           <div class="container">
             <a href="/" class="header-logo">
@@ -254,9 +254,41 @@
             </div>
           </div>
         </footer>
-      </div>
-    </main>
+      <!-- </div>
+    </main> -->
   </body>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js" integrity="sha256-huW7yWl7tNfP7lGk46XE+Sp0nCotjzYodhVKlwaNeco=" crossorigin="anonymous"></script>
+<script>
+SmoothScroll({
+// Время скролла 400 = 0.4 секунды
+animationTime : 1000,
+// Размер шага в пикселях
+stepSize : 75,
+
+// Дополнительные настройки:
+
+// Ускорение
+accelerationDelta : 100,
+// Максимальное ускорение
+accelerationMax : 2,
+
+// Поддержка клавиатуры
+keyboardSupport : true,
+// Шаг скролла стрелками на клавиатуре в пикселях
+arrowScroll : 50,
+
+// Pulse (less tweakable)
+// ratio of "tail" to "acceleration"
+pulseAlgorithm : true,
+pulseScale : 4,
+pulseNormalize : 1,
+
+// Поддержка тачпада
+touchpadSupport : true,
+})
+</script>
+
   <!-- <script src="./js/tweenmax.min.js"></script> -->
   <script src="./js/gsap.min.js"></script>
   <script src="./js/scrolltrigger.min.js"></script>
