@@ -43,9 +43,11 @@
             <img src="./img/title-text-44.svg" alt="Websites" class="hover" />
           </a>
         </div>
-        <a href="#" class="hero-screen-cta">
-          <img src="./img/cta-circle.svg" alt="cta" />
-        </a>
+        <div class="hero-screen-cta-wrapper">
+          <a href="#" class="hero-screen-cta">
+            <img src="./img/cta-circle.svg" alt="cta" />
+          </a>
+        </div>
       </div>
     </section>
     <section class="cases">
@@ -267,8 +269,18 @@
     <footer class="footer">
       <div class="container">
         <div class="footer-cta">
-          <span>Have an Idea?</span>
-          <a href="#">Drop us a Line</a>
+          <div class="text-reveal">
+            <div class="text-reveal-inner">
+              <span>Have an Idea?</span>
+            </div>
+          </div>
+          <div class="text-reveal">
+            <div class="text-reveal-inner">
+              <span>
+                <a href="#">Drop us a Line</a>
+              </span>
+            </div>
+          </div>
         </div>
         <div class="footer-contacts">
           <a href="mailto:info@orangeorange.agency" class="footer-email">info@orangeorange.agency</a>
@@ -285,7 +297,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js" integrity="sha256-huW7yWl7tNfP7lGk46XE+Sp0nCotjzYodhVKlwaNeco=" crossorigin="anonymous"></script>
 <script>
   SmoothScroll({
-    animationTime : 1000,
+    animationTime : 700,
     stepSize : 70,
     accelerationDelta : 100,
     accelerationMax : 2,
