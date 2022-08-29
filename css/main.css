@@ -187,47 +187,13 @@ body {
           transform-style: preserve-3d;
 }
 
-.reveal {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
-}
-
-.reveal img {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
-}
-
-body:not(.no-js) .image-wrap {
-  -webkit-transition: 2.2s ease-in-out;
-  transition: 2.2s ease-in-out;
-  -webkit-transition-delay: 0.2s;
-          transition-delay: 0.2s;
-  position: relative;
-  width: auto;
-  overflow: hidden;
-  -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
-          clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
-  visibility: hidden;
-}
-
-body:not(.no-js) .animating .image-wrap {
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  visibility: visible;
-  -webkit-transform: skewY(0);
-          transform: skewY(0);
-}
-
 .text-reveal {
   overflow: hidden;
   line-height: 1;
-  padding: 50px 0;
 }
 
 .text-reveal span {
   display: block;
-  -webkit-transform: translateY(130%);
-          transform: translateY(130%);
 }
 
 .text-reveal.fading-up span {
@@ -395,10 +361,10 @@ input[type="number"] {
 }
 
 .header .header-logo, .header .hamburger {
-  -webkit-animation: revealReversed 1.5s ease-out forwards;
-          animation: revealReversed 1.5s ease-out forwards;
-  -webkit-animation-delay: 3s;
-          animation-delay: 3s;
+  -webkit-animation: revealReversed 1s ease-out forwards;
+          animation: revealReversed 1s ease-out forwards;
+  -webkit-animation-delay: 1.4s;
+          animation-delay: 1.4s;
   -webkit-transform: translateY(-80px);
           transform: translateY(-80px);
 }
@@ -502,35 +468,35 @@ input[type="number"] {
   display: block;
   -webkit-transform: translateY(150%);
           transform: translateY(150%);
-  -webkit-animation: reveal 1.5s ease-in-out forwards;
-          animation: reveal 1.5s ease-in-out forwards;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  -webkit-animation: reveal .8s ease-out forwards;
+          animation: reveal .8s ease-out forwards;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 
 .hero-screen-title .title-item-1 img {
-  -webkit-animation-delay: 0.6s;
-          animation-delay: 0.6s;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
 }
 
 .hero-screen-title .title-item-2 img {
+  -webkit-animation-delay: .8s;
+          animation-delay: .8s;
+}
+
+.hero-screen-title .title-item-3 img {
   -webkit-animation-delay: 1.2s;
           animation-delay: 1.2s;
 }
 
-.hero-screen-title .title-item-3 img {
-  -webkit-animation-delay: 1.8s;
-          animation-delay: 1.8s;
-}
-
 .hero-screen-title .title-item-4 img {
-  -webkit-animation-delay: 2.4s;
-          animation-delay: 2.4s;
+  -webkit-animation-delay: 1.4s;
+          animation-delay: 1.4s;
 }
 
 .hero-screen-subtitle {
-  -webkit-animation: fadeInFromNone 2s ease-in-out;
-          animation: fadeInFromNone 2s ease-in-out;
+  -webkit-animation: fadeInFromNone 1s ease-in-out;
+          animation: fadeInFromNone 1s ease-in-out;
 }
 
 .hero-screen {
@@ -555,10 +521,10 @@ input[type="number"] {
   bottom: 70px;
   right: 0;
   opacity: 0;
-  -webkit-animation: fadeInFromNone 2s ease-out forwards;
-          animation: fadeInFromNone 2s ease-out forwards;
-  -webkit-animation-delay: 3.5s;
-          animation-delay: 3.5s;
+  -webkit-animation: fadeInFromNone 1s ease-out forwards;
+          animation: fadeInFromNone 1s ease-out forwards;
+  -webkit-animation-delay: 1.8s;
+          animation-delay: 1.8s;
 }
 
 .hero-screen-cta img {
@@ -645,7 +611,7 @@ input[type="number"] {
 }
 
 .cases-category {
-  margin-bottom: 200px;
+  margin-bottom: 100px;
 }
 
 .case-item {
@@ -655,7 +621,7 @@ input[type="number"] {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
 
 .case-item-info {
@@ -707,6 +673,13 @@ input[type="number"] {
 
 .case-item-image {
   width: 50%;
+  position: relative;
+}
+
+.case-item-image .reveal {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
 }
 
 .case-item-image img {

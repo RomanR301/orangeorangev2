@@ -195,35 +195,38 @@ body {
   transform-style: preserve-3d;
 }
 // IMAGE REVEAL ANIMATION
-.reveal {
-  transform: rotate(180deg);
-}
-.reveal img {
-  transform: rotate(180deg);
-}
-body:not(.no-js) .image-wrap {
-  transition: 2.2s ease-in-out;
-  transition-delay: 0.2s;
-  position: relative;
-  width: auto;
-  overflow: hidden;
-  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
-  visibility: hidden;
-}
-body:not(.no-js) .animating .image-wrap {
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  visibility: visible;
-  transform: skewY(0);
-}
+// .reveal {
+//   transform: rotate(180deg);
+// }
+// .reveal img {
+//   transform: rotate(180deg);
+// }
+// body:not(.no-js) .image-wrap {
+//   transition: 2.2s ease-in-out;
+//   transition-delay: 0.2s;
+//   position: relative;
+//   width: auto;
+//   overflow: hidden;
+//   clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+//   visibility: hidden;
+// }
+// body:not(.no-js) .animating .image-wrap {
+//   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+//   visibility: visible;
+//   transform: skewY(0);
+// }
 // TEXT REVEAL ANIMATION
 
 .text-reveal {
   overflow: hidden;
   line-height: 1;
-  padding: 50px 0;
+  // padding: 50px 0;
+  &-inner {
+    // transform: translate(0px, 140px);
+    // transform: translateY();
+  }
   span {
     display: block;
-    transform: translateY(130%);
   }
   &.fading-up {
     span {
@@ -337,8 +340,8 @@ input[type="number"] {
 
 .header {
   .header-logo, .hamburger {
-    animation: revealReversed 1.5s ease-out forwards;
-    animation-delay: 3s;
+    animation: revealReversed 1s ease-out forwards;
+    animation-delay: 1.4s;
     transform: translateY(-80px);
   }
 }
@@ -420,34 +423,34 @@ input[type="number"] {
     img {
       display: block;
       transform: translateY(150%);
-      animation: reveal 1.5s ease-in-out forwards;
-      transition: all 0.3s ease-in-out;
+      animation: reveal .8s ease-out forwards;
+      transition: all 0.3s ease-out;
     }
     &-1 {
       img {
-        animation-delay: 0.6s;
+        animation-delay: 0.4s;
       }
     }
     &-2 {
       img {
-        animation-delay: 1.2s;
+        animation-delay: .8s;
       }
     }
     &-3 {
       img {
-        animation-delay: 1.8s;
+        animation-delay: 1.2s;
       }
     }
     &-4 {
       img {
-        animation-delay: 2.4s;
+        animation-delay: 1.4s;
       }
     }
   }
 }
 
 .hero-screen-subtitle {
-  animation: fadeInFromNone 2s ease-in-out;
+  animation: fadeInFromNone 1s ease-in-out;
 }
 
 .hero-screen {
@@ -465,8 +468,8 @@ input[type="number"] {
       bottom: 70px;
       right: 0;
       opacity: 0;
-      animation: fadeInFromNone 2s ease-out forwards;
-      animation-delay: 3.5s;
+      animation: fadeInFromNone 1s ease-out forwards;
+      animation-delay: 1.8s;
     }
     img {
       transition: all 0.3s ease-in-out;
@@ -506,18 +509,8 @@ input[type="number"] {
         }
       }
     }
-    img {
-      // position: absolute;
-      // top: 50%;
-      // transform: translate(0, -50%);
-      // left: 0;
-      // transition: all 0.3s ease-in-out;
-    }
     .hover {
       opacity: 0;
-    }
-    img,
-    svg {
     }
   }
 }
@@ -547,7 +540,7 @@ input[type="number"] {
     }
   }
   &-category {
-    margin-bottom: 200px;
+    margin-bottom: 100px;
   }
 }
 
@@ -555,7 +548,7 @@ input[type="number"] {
   &-item {
     display: flex;
     align-items: center;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
     &-info {
       width: 50%;
       padding: 0 120px 0 0;
@@ -593,6 +586,12 @@ input[type="number"] {
     }
     &-image {
       width: 50%;
+      position: relative;
+      .reveal {
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+      }
       img {
         display: block;
         width: 100%;

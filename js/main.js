@@ -71,51 +71,91 @@ document.addEventListener("DOMContentLoaded", function(event) {
     // }
     // }
 
+
+
+
+
     // IMAGE ANIMATION
-    const options = {
-      root: null,
-      rootMargin: "0px",
-      threshold: 0.2
-    };
+    // const options = {
+    //   root: null,
+    //   rootMargin: "0px",
+    //   threshold: 0.1
+    // };
   
-    let revealCallback = (entries) => {
-      entries.forEach((entry) => {
-        let container = entry.target;
+    // let revealCallback = (entries) => {
+    //   entries.forEach((entry) => {
+    //     let container = entry.target;
   
-        if (entry.isIntersecting) {
-          console.log(container);
-          container.classList.add("animating");
-          return;
-        }
-      });
-    };
+    //     if (entry.isIntersecting) {
+    //       container.classList.add("animating");
+    //       return;
+    //     }
+    //   });
+    // };
   
-    let revealObserver = new IntersectionObserver(revealCallback, options);
+    // let revealObserver = new IntersectionObserver(revealCallback, options);
   
-    document.querySelectorAll(".reveal").forEach((reveal) => {
-      revealObserver.observe(reveal);
+    // document.querySelectorAll(".reveal").forEach((reveal) => {
+    //   revealObserver.observe(reveal);
+    // });
+
+    // //TEXT ANIMATION
+    // let fadeupCallback = (entries) => {
+    //   entries.forEach((entry) => {
+    //     let container = entry.target;
+    //     container.classList.add("not-fading-up");
+  
+    //     if (entry.isIntersecting) {
+    //       container.classList.add("fading-up");
+    //       return;
+    //     }
+    //   });
+    // };
+  
+    // let fadeupObserver = new IntersectionObserver(fadeupCallback, options);
+  
+    // document.querySelectorAll(".text-reveal").forEach((fadeup) => {
+    //   fadeupObserver.observe(fadeup);
+    // });
+
+        var $revealY = $('.text-reveal-inner');
+
+    $($revealY).each(function(i) {
+      gsap.from($revealY[i], {
+        scrollTrigger: {
+          trigger: $revealY[i],
+        },
+        y: 140,
+        opacity: 0,
+        duration: 1.5,
+        ease: Power4.easeOut
+      })
+    })
+
+
+    let ctrl3 = new ScrollMagic.Controller();
+
+    // each image
+    [].forEach.call(document.querySelectorAll('.reveal'), function(e) {
+
+      // gsap timeline
+      let tl3 = new TimelineMax();
+      tl3.from(e, 2, { yPercent: -100, ease: Expo.easeInOut, duration: 3 }, .5);
+      tl3.from(e.querySelector('.img'), 2, {  yPercent: 100, ease: Expo.easeInOut }, .5);
+
+      // scrollmagic scene
+      let scene = new ScrollMagic.Scene({ triggerElement: e, triggerHook: .1, reverse:false })
+      .setTween(tl3)
+      .addTo(ctrl3);
+
     });
 
-    //TEXT ANIMATION
-    let fadeupCallback = (entries) => {
-      entries.forEach((entry) => {
-        let container = entry.target;
-        container.classList.add("not-fading-up");
-  
-        if (entry.isIntersecting) {
-          container.classList.add("fading-up");
-          return;
-        }
-      });
-    };
-  
-    let fadeupObserver = new IntersectionObserver(fadeupCallback, options);
-  
-    document.querySelectorAll(".text-reveal").forEach((fadeup) => {
-      fadeupObserver.observe(fadeup);
-    });
 
 
+
+
+
+    
     var rellax = new Rellax('.rellax', {
       center: true,
       vertical: true,
