@@ -220,11 +220,6 @@ body {
 .text-reveal {
   overflow: hidden;
   line-height: 1;
-  // padding: 50px 0;
-  &-inner {
-    // transform: translate(0px, 140px);
-    // transform: translateY();
-  }
   span {
     display: block;
   }
@@ -355,7 +350,7 @@ input[type="number"] {
   z-index: 2;
   &-logo {
     display: flex;
-    
+    z-index: 2222;
   }
   .container {
     max-width: 1590px;
@@ -369,6 +364,7 @@ input[type="number"] {
     width: 40px;
     height: 40px;
     cursor: pointer;
+    z-index: 222;
     span {
       background: $text;
       width: 40px;
@@ -376,7 +372,7 @@ input[type="number"] {
       right: 0;
       display: block;
       position: absolute;
-      transition: all 0.3s ease-in-out;
+      transition: all .4s ease-in-out;
       &:nth-child(1) {
         top: 10px;
       }
@@ -395,7 +391,7 @@ input[type="number"] {
       }
     }
     &.active {
-      .span {
+      span {
         &:nth-child(1) {
           width: 0;
           right: 50%;
@@ -409,47 +405,88 @@ input[type="number"] {
         }
         &:nth-child(4) {
           width: 0;
-          left: 50%;
+          right: 50%;
           opacity: 0;
         }
       }
     }
   }
 }
-
-.hero-screen-title {
+.navbar {
+  position: fixed;
+  top: 0;
+  left: -100vw;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/bg.png");
+  background-size: contain;
+  background-repeat: repeat;
+  background-color: $background;
+  transition: all .6s ease-in-out;
+  &.active {
+    left: 0;
+  }
   .title-item {
-    overflow: hidden;
+    margin-bottom: 40px;
     img {
-      display: block;
-      transform: translateY(150%);
-      animation: reveal .8s ease-out forwards;
-      transition: all 0.3s ease-out;
+      transition: all .3s ease-in-out;
+      width: 80%;
     }
-    &-1 {
-      img {
-        animation-delay: 0.4s;
-      }
-    }
-    &-2 {
-      img {
-        animation-delay: .8s;
-      }
-    }
-    &-3 {
-      img {
-        animation-delay: 1.2s;
-      }
-    }
-    &-4 {
-      img {
-        animation-delay: 1.4s;
+  }
+  .container {
+    height: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    .footer-contacts {
+      margin-top: 60px;
+      width: 100%;
+      position: relative;
+      .hero-screen-cta {
+        position: absolute;
+        right: 140px;
+        bottom: calc(100% + 20px);
       }
     }
   }
 }
 
-.hero-screen-subtitle {
+
+.hero-screen {
+  .hero-screen-title {
+    .title-item {
+      overflow: hidden;
+      img {
+        display: block;
+        transform: translateY(150%);
+        animation: reveal .8s ease-out forwards;
+        transition: all 0.3s ease-out;
+      }
+      &-1 {
+        img {
+          animation-delay: 0.4s;
+        }
+      }
+      &-2 {
+        img {
+          animation-delay: .8s;
+        }
+      }
+      &-3 {
+        img {
+          animation-delay: 1.2s;
+        }
+      }
+      &-4 {
+        img {
+          animation-delay: 1.4s;
+        }
+      }
+    }
+  }
+}
+
+.hero-screen .hero-screen-subtitle {
   animation: fadeInFromNone 1s ease-in-out;
 }
 
@@ -483,7 +520,7 @@ input[type="number"] {
   &-subtitle {
     font-size: 24px;
     line-height: 36px;
-    margin-bottom: 20px;
+    margin-bottom: 60px;
   }
   &-title {
     display: flex;
@@ -493,12 +530,12 @@ input[type="number"] {
       cursor: pointer;
       position: relative;
       width: auto;
-      // height: 150px;
       display: block;
       margin-bottom: 50px;
       .hover {
         position: absolute;
         top: 0;
+        left: 0;
       }
       &:hover {
         .default {
@@ -646,7 +683,7 @@ input[type="number"] {
     justify-content: space-between;
     align-items: center;
   }
-  .footer-email {
+  &-email {
     position: relative;
     &:before {
       content: "";
