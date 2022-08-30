@@ -76,5 +76,50 @@ document.addEventListener("DOMContentLoaded", function(event) {
     $('html,body').animate({
         scrollTop: $("#websites").offset().top - 170}, 1500);
     });
+
+    // FORMS
+    $(function () {
+      $('.form-input, .form-textarea')
+          .on('focusin', function(){
+          $(this).parent().find('.label-name').addClass('active');
+      })
+          .on('focusout', function(){
+            $(this).parent().find('.label-name').removeClass('active');
+      })
+      $(".form-control input, .form-control textarea").focusout(function() {
+          let $this = $(this);
+          let $label = $this.parent().find('.label-name')
+  
+          if ($this.val() != "") {
+              $this.addClass("has-content");
+              $label.addClass("active");
+          }
+          else {
+              $this.removeClass("has-content");
+              $label.removeClass("active");
+          }
+  
+      })
+      $("#uploadBtn").click(function() {
+          $('#uploadFile').addClass("has-content");
+      })
+      $(document).on('click', '#uploadFile', function(){
+          $('#uploadBtn').click();
+      })
+  });
+
+  $(document).on('click', '.hero-screen-cta', function() {
+    $('.modal').addClass('active');
+  })
+
+  $(document).on('click', '.modal-close', function() {
+    $('.modal').removeClass('active');
+  })
+
+  
+  document.getElementById("uploadBtn").onchange = function () {
+  document.getElementById("uploadFile").value = this.value.replace("C:\\fakepath\\", "");
+  };
+  
 })
 

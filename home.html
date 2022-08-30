@@ -9,10 +9,10 @@
   </head>
   <!DOCTYPE html>
   <body>
-    <header class="header">
+    <header class="header home-header">
       <div class="container">
-        <a href="/" class="header-logo">
-          <img src="./img/main logo.svg" alt="orange orange logo" />
+        <a href="home.html" class="header-logo">
+          <img src="./img/main-logo.svg" alt="orange orange logo" />
         </a>
         <div class="hamburger">
           <span></span>
@@ -309,6 +309,115 @@
         </div>
       </div>
     </footer>
+    <div class="modal">
+      <div class="modal-body">
+        <form action="sendEmail.php" method="POST" enctype="multipart/form-data">
+          <div class="modal-header">
+            <div class="container">
+              <div class="modal-header-top">
+                <a href="home.html" class="modal-logo">
+                  <img src="./img/main-logo.svg" alt="orangeorange logo">
+                </a>
+                <div class="modal-close">
+                  <img src="./img/icons/icon-close.svg" alt="close modal">
+                </div>
+              </div>
+              <div class="modal-header-title">
+                Let's start a new journey
+              </div>
+              <div class="modal-header-email">
+                <a href="mailto:orangeorangeagecy@gmail.com">orangeorangeagecy@gmail.com</a>
+              </div>
+            </div>
+          </div>
+          <div class="form-section">
+            <div class="container">
+              <div class="form-heading">
+                Select the areas that <br> you are interested in
+              </div>
+              <div class="form-checkboxes-container">
+                <div class="form-checkbox">
+                  <input type="checkbox" name="mobile-application-design" id="mobile_application_design">
+                  <label for="mobile_application_design">Mobile Application Design</label>
+                </div>
+                <div class="form-checkbox">
+                  <input type="checkbox" name="web-application-design" id="web_application_design">
+                  <label for="web_application_design">Web Application Design</label>
+                </div>
+                <div class="form-checkbox">
+                  <input type="checkbox" name="website-design" id="website_design">
+                  <label for="website_design">Website Design</label>
+                </div>
+                <div class="form-checkbox">
+                  <input type="checkbox" name="landing-page" id="landing_page">
+                  <label for="landing_page">Landing Page</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-section">
+            <div class="container">
+              <div class="form-heading">
+                Choose your budget
+              </div>
+              <div class="form-row">
+                <div class="form-control">
+                  <input type="number" class="form-input" name="price-from" id="price_from" autocomplete="off">
+                  <label for="price-from" class="label-name">
+                    from 
+                  </label>
+                </div>
+                <div class="form-control">
+                  <input type="number" class="form-input" name="price-to" id="price_to" autocomplete="off">
+                  <label for="price-to" class="label-name">
+                    to
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-section">
+            <div class="container">
+              <div class="form-heading">
+                Tell us about the project
+              </div>
+              <div class="form-row">
+                <div class="form-control">
+                  <input type="text" class="form-input" name="name" id="name" autocomplete="off" required="">
+                  <label for="name" class="label-name">
+                    Name<span>*</span>
+                  </label>
+                </div>
+                <div class="form-control">
+                  <input type="email" class="form-input" name="email" id="email" autocomplete="off" required="">
+                  <label for="email" class="label-name">
+                    Email<span>*</span>
+                  </label>
+                </div>
+                <div class="form-control form-control-file">
+                  <input id="uploadFile" name="upload" class="form-input">
+                  <label for="" class="label-name">File</label>
+                  <div class="fileBrowse">
+                    <span class="wpcf7-form-control-wrap fileupload">
+                      <input type="file" name="upload" size="40" class="form-file" id="uploadBtn" accept=".png,.jpg,.jpeg,.zip,.rar,.doc,.docx,.txt" aria-invalid="false">
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="form-control form-control-textarea">
+                <textarea name="message" class="form-input form-textarea" id="message" autocomplete="off"></textarea>
+                <label for="country" class="label-name">
+                  Your message
+                </label>
+              </div>
+              <div class="form-submit-container">
+                <button class="form-submit" type="submit">Send Details</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
   </body>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js" integrity="sha256-huW7yWl7tNfP7lGk46XE+Sp0nCotjzYodhVKlwaNeco=" crossorigin="anonymous"></script>
 
