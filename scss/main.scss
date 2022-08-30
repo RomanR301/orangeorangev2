@@ -719,9 +719,56 @@ input[type="number"] {
     }
   }
 }
-* {
-  // outline: 1px solid red;
+
+.case-single {
+  margin: 238px 0 0 0;
+  h1 {
+    font-size: 100px;
+    line-height: 120px;
+    font-weight: 300;
+    margin-bottom: 80px;
+    max-width: 1300px;
+  }
+  &-meta {
+    display: flex;
+    margin-bottom: 100px;
+    &-item {
+      margin-right: 80px;
+    }
+    &__title {
+      font-size: 18px;
+      line-height: 36px;
+      color: #797979;
+    }
+    &__value {
+      font-size: 24px;
+      line-height: 36px;
+    }
+  }
+  &-text {
+    margin-bottom: 200px;
+    display: flex;
+
+    &__title {
+      width: 295px;
+      min-width: 295px;
+      font-size: 24px;
+      line-height: 36px;
+    }
+    &__description {
+      font-size: 32px;
+      line-height: 50px;
+    }
+  }
+  &-image {
+    margin-bottom: 200px;
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
 }
+
 @media (min-width: 2000px) {
   .hero-screen {
     .container {

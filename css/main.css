@@ -892,6 +892,69 @@ input[type="number"] {
           transform-origin: bottom left;
 }
 
+.case-single {
+  margin: 238px 0 0 0;
+}
+
+.case-single h1 {
+  font-size: 100px;
+  line-height: 120px;
+  font-weight: 300;
+  margin-bottom: 80px;
+  max-width: 1300px;
+}
+
+.case-single-meta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 100px;
+}
+
+.case-single-meta-item {
+  margin-right: 80px;
+}
+
+.case-single-meta__title {
+  font-size: 18px;
+  line-height: 36px;
+  color: #797979;
+}
+
+.case-single-meta__value {
+  font-size: 24px;
+  line-height: 36px;
+}
+
+.case-single-text {
+  margin-bottom: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.case-single-text__title {
+  width: 295px;
+  min-width: 295px;
+  font-size: 24px;
+  line-height: 36px;
+}
+
+.case-single-text__description {
+  font-size: 32px;
+  line-height: 50px;
+}
+
+.case-single-image {
+  margin-bottom: 200px;
+}
+
+.case-single-image img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 @media (min-width: 2000px) {
   .hero-screen .container {
     padding: 80px 0;
