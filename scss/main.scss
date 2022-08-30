@@ -194,29 +194,6 @@ body {
   width: 100%;
   transform-style: preserve-3d;
 }
-// IMAGE REVEAL ANIMATION
-// .reveal {
-//   transform: rotate(180deg);
-// }
-// .reveal img {
-//   transform: rotate(180deg);
-// }
-// body:not(.no-js) .image-wrap {
-//   transition: 2.2s ease-in-out;
-//   transition-delay: 0.2s;
-//   position: relative;
-//   width: auto;
-//   overflow: hidden;
-//   clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
-//   visibility: hidden;
-// }
-// body:not(.no-js) .animating .image-wrap {
-//   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-//   visibility: visible;
-//   transform: skewY(0);
-// }
-// TEXT REVEAL ANIMATION
-
 .text-reveal {
   overflow: hidden;
   line-height: 1;
@@ -415,7 +392,7 @@ input[type="number"] {
 .navbar {
   position: fixed;
   top: 0;
-  left: -100vw;
+  left: -100%;
   width: 100%;
   height: 100%;
   background-image: url("../img/bg.png");
@@ -426,11 +403,13 @@ input[type="number"] {
   &.active {
     left: 0;
   }
-  .title-item {
-    margin-bottom: 40px;
-    img {
-      transition: all .3s ease-in-out;
-      width: 80%;
+  .hero-screen-title {
+    margin: 60px 0;
+    .title-item {
+      img {
+        transition: all .3s ease-in-out;
+        height: 130px;
+      }
     }
   }
   .container {
@@ -439,7 +418,6 @@ input[type="number"] {
     align-items: flex-start;
     justify-content: center;
     .footer-contacts {
-      margin-top: 60px;
       width: 100%;
       position: relative;
       .hero-screen-cta {
@@ -520,7 +498,7 @@ input[type="number"] {
   &-subtitle {
     font-size: 24px;
     line-height: 36px;
-    margin-bottom: 60px;
+    margin-bottom: 20px;
   }
   &-title {
     display: flex;
@@ -531,7 +509,7 @@ input[type="number"] {
       position: relative;
       width: auto;
       display: block;
-      margin-bottom: 50px;
+      // margin-bottom: 50px;
       .hover {
         position: absolute;
         top: 0;
@@ -589,6 +567,7 @@ input[type="number"] {
     &-info {
       width: 50%;
       padding: 0 120px 0 0;
+      z-index: 32;
     }
     &__title {
       font-size: 24px;
@@ -625,6 +604,7 @@ input[type="number"] {
       width: 50%;
       position: relative;
       .reveal {
+        display: block;
         overflow: hidden;
         width: 100%;
         height: 100%;
@@ -640,7 +620,7 @@ input[type="number"] {
 
 .footer {
   .container {
-    padding: 280px 0;
+    padding: 280px 15px;
     border-top: 1px solid $text;
   }
   .text-reveal {
@@ -728,6 +708,62 @@ input[type="number"] {
           transform-origin: bottom left;
         }
       }
+    }
+  }
+}
+* {
+  // outline: 1px solid red;
+}
+@media (min-width: 2000px) {
+  .hero-screen {
+    .container {
+      padding: 80px 0;
+    }
+  }
+}
+@media (max-width: 1600px) {
+  .hero-screen-cta-wrapper {
+    right: 50px;
+  }
+  .footer .container {
+    padding: 180px 15px;
+  }
+}
+@media (max-height: 960px) {
+  .hero-screen {
+    padding: 110px 0 35px 0;
+  }
+  .footer .container {
+    padding: 160px 15px;
+  }
+}
+@media (max-height: 860px) {
+  .hero-screen-title .title-item img,
+  .navbar .hero-screen-title .title-item img {
+    height: 120px;
+  }
+  .hero-screen-cta-wrapper {
+    bottom: 0;
+  }
+}
+
+@media (max-height: 760px) {
+  .hero-screen-title .title-item img, 
+  .navbar .hero-screen-title .title-item img {
+    height: 100px;
+  }
+  .navbar .hero-screen-title {
+    margin: 110px 0 40px 0;
+  }
+}
+@media (max-width: 1200px) {
+  .container {
+    padding: 0 60px;
+  }
+  .cases {
+    &__heading {
+      width: 100%;
+      margin: 60px 0 80px 0;
     }
   }
 }
