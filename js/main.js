@@ -34,11 +34,27 @@ document.addEventListener("DOMContentLoaded", function(event) {
   });
 
   // PARALLAX 
-  var rellax = new Rellax('.rellax', {
-    center: true,
-    vertical: true,
-    horizontal: false
-  });
+
+  if(window.matchMedia('(min-width: 776px)').matches){
+    var rellax = new Rellax('.rellax', {
+      center: true,
+      vertical: true,
+      horizontal: false
+    });
+    SmoothScroll({
+      animationTime : 700,
+      stepSize : 70,
+      accelerationDelta : 100,
+      accelerationMax : 2,
+
+      keyboardSupport : true,
+      arrowScroll : 50,
+      pulseAlgorithm : true,
+      pulseScale : 4,
+      pulseNormalize : 1,
+      touchpadSupport : true,
+  })
+  }
 
   $(".title-item-1").click(function() {
     $('.navbar, .hamburger').removeClass('active')
