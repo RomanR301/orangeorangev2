@@ -34,7 +34,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
   });
 
   // PARALLAX 
-
   if(window.matchMedia('(min-width: 776px)').matches){
     var rellax = new Rellax('.rellax', {
       center: true,
@@ -115,8 +114,22 @@ document.addEventListener("DOMContentLoaded", function(event) {
   $(document).on('click', '.modal-close', function() {
     $('.modal').removeClass('active');
   })
+  const yOffset = window.pageYOffset;
+  console.log(yOffset)
 
+  if (yOffset > 20) {
+    $('.hero-screen-cta-wrapper').addClass('fixed');
+  }
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 20) {
+      $('.hero-screen-cta-wrapper').addClass('fixed');
+    } else {
+      $('.hero-screen-cta-wrapper').removeClass("fixed");  
+    }
+  })
   
+
+
   document.getElementById("uploadBtn").onchange = function () {
   document.getElementById("uploadFile").value = this.value.replace("C:\\fakepath\\", "");
   };

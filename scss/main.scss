@@ -499,13 +499,23 @@ input[type="number"] {
     display: flex;
     animation: rotation 12s infinite linear;
     -webkit-animation: rotation 12s infinite linear;
+    cursor: pointer;
     &-wrapper {
+      z-index: 30;
       position: absolute;
       bottom: 70px;
       right: 0;
       opacity: 0;
       animation: fadeInFromNone 1s ease-out forwards;
       animation-delay: 1.8s;
+      position: fixed;
+      right: 16vw;
+      bottom: 25vh;
+      transition: all .5s ease-in-out;
+      &.fixed {
+        bottom: 30px;
+        right: 30px;
+      }
     }
     img {
       transition: all 0.3s ease-in-out;
@@ -1068,6 +1078,14 @@ input[type="number"] {
       padding: 80px 0;
     }
   }
+  .hero-screen {
+    &-cta {
+      &-wrapper {
+        right: 25vw;
+        bottom: 30vh;
+      }
+    }
+  }
 }
 @media (max-width: 1600px) {
   .hero-screen-cta-wrapper {
@@ -1075,6 +1093,18 @@ input[type="number"] {
   }
   .footer .container {
     padding: 180px 15px;
+  }
+  .hero-screen-cta-wrapper {
+    bottom: 30px;
+    right: 30px;
+  }
+}
+@media (max-width: 1400px) {
+  .hero-screen-cta-wrapper {
+    img {
+      width: 140px;
+      height: 140px;
+    }
   }
 }
 @media (max-height: 960px) {
@@ -1104,9 +1134,6 @@ input[type="number"] {
   .hero-screen-title .title-item img,
   .navbar .hero-screen-title .title-item img {
     height: 120px;
-  }
-  .hero-screen-cta-wrapper {
-    bottom: 0;
   }
 }
 
@@ -1214,6 +1241,18 @@ input[type="number"] {
 }
 
 @media (max-width: 992px) {
+  .hero-screen-cta-wrapper {
+    bottom: 15px;
+    right: 15px;
+    &.fixed {
+      bottom: 15px;
+      right: 15px;
+    }
+    img {
+      width: 100px;
+      height: 100px;
+    }
+  }
   .hero-screen-title .title-item img, 
   .navbar .hero-screen-title .title-item img {
     height: 80px;
@@ -1355,11 +1394,12 @@ input[type="number"] {
     padding: 86px 0 60px 0;
     &-cta {
       &-wrapper {
-        bottom: -40px;
-        right: 0;
+        bottom: 15px;
+        right: 15px;
       }
       img {
-        width: 100px;
+        width: 80px;
+        height: 80px;
       }
     }
   }
