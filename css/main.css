@@ -684,7 +684,7 @@ input[type="number"] {
 }
 
 .cases__heading {
-  margin: 200px 0 200px 120px;
+  margin: 200px 0 200px 0;
   width: 970px;
   font-weight: 300;
   font-size: 32px;
@@ -694,7 +694,6 @@ input[type="number"] {
           animation: fadeInFromNone 1s ease-out forwards;
   -webkit-animation-delay: 2s;
           animation-delay: 2s;
-  text-align: center;
 }
 
 .cases .text-reveal {

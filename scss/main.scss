@@ -569,7 +569,7 @@ input[type="number"] {
 
 .cases {
   &__heading {
-    margin: 200px 0 200px 120px;
+    margin: 200px 0 200px 0;
     width: 970px;
     font-weight: 300;
     font-size: 32px;
@@ -577,7 +577,6 @@ input[type="number"] {
     opacity: 0;
     animation: fadeInFromNone 1s ease-out forwards;
     animation-delay: 2s;
-    text-align: center;
   }
   .text-reveal {
     margin-bottom: 100px;
