@@ -308,8 +308,15 @@ input[type="number"] {
   flex-flow: row wrap;
   margin: 0 -15px;
 }
-
-
+.--relative {
+  position: relative;
+}
+.beehance-badges {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 200px;
+}
 
 .header.home-header {
   .header-logo, .hamburger {
@@ -667,10 +674,11 @@ input[type="number"] {
     font-size: 80px;
     line-height: 100px;
     margin-bottom: 175px;
-    a {
+    p {
       display: block;
       position: relative;
       overflow: hidden;
+      cursor: pointer;
       &:before {
         content: "";
         position: absolute;
@@ -756,7 +764,7 @@ input[type="number"] {
       font-size: 100px;
       line-height: 120px;
       font-weight: 300;
-      max-width: 1300px;
+      max-width: 80%;
       display: block;
       transform: translateY(100%);
       animation: reveal .6s ease-out forwards;
@@ -1114,9 +1122,6 @@ input[type="number"] {
   .footer .container {
     padding: 160px 15px;
   }
-  .case-item-image {
-    height: 700px;
-  }
   .cases-category {
     margin-bottom: 50px;
   }
@@ -1131,6 +1136,9 @@ input[type="number"] {
   }
 }
 @media (max-height: 860px) {
+  .case-item-image {
+    // height: 700px;
+  }
   .hero-screen-title .title-item img,
   .navbar .hero-screen-title .title-item img {
     height: 120px;
@@ -1155,6 +1163,9 @@ input[type="number"] {
   }
 }
 @media (max-width: 1200px) {
+  .beehance-badges {
+    width: 170px;
+  }
   .navbar .hero-screen-title .title-item img {
     height: 125px;
   }
@@ -1351,6 +1362,14 @@ input[type="number"] {
 }
 
 @media (max-width: 767px) {
+  .case-single-title h1 {
+    max-width: 100%;
+  }
+  .beehance-badges {
+    position: static;
+    width: 240px;
+    margin: -100px 0 50px 0;
+  }
   .navbar {
     .hero-screen-title {
       margin: 90px 0 0 0;

@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
       })
   });
 
-  $(document).on('click', '.hero-screen-cta', function() {
+  $(document).on('click', '.cta-trigger', function() {
     $('.modal').addClass('active');
   })
 
