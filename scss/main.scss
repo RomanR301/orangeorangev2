@@ -577,6 +577,7 @@ input[type="number"] {
     opacity: 0;
     animation: fadeInFromNone 1s ease-out forwards;
     animation-delay: 2s;
+    text-align: center;
   }
   .text-reveal {
     margin-bottom: 100px;
@@ -603,7 +604,7 @@ input[type="number"] {
   &-item {
     display: flex;
     align-items: center;
-    margin-bottom: 50px;
+    margin-bottom: 200px;
     &-info {
       width: 50%;
       padding: 0 120px 0 0;
@@ -1080,6 +1081,9 @@ input[type="number"] {
     line-height: 50px;
   }
 }
+.footer-cta .cta-trigger p {
+  padding: 0 0 10px 0;
+}
 @media (min-width: 2000px) {
   .hero-screen {
     .container {
@@ -1096,6 +1100,9 @@ input[type="number"] {
   }
 }
 @media (max-width: 1600px) {
+  .footer .footer-links {
+    padding-right: 150px;
+  }
   .hero-screen-cta-wrapper {
     right: 50px;
   }
@@ -1108,6 +1115,9 @@ input[type="number"] {
   }
 }
 @media (max-width: 1400px) {
+  .footer .footer-links {
+    padding-right: 0;
+  }
   .hero-screen-cta-wrapper {
     img {
       width: 140px;
@@ -1120,7 +1130,7 @@ input[type="number"] {
     padding: 110px 0 35px 0;
   }
   .footer .container {
-    padding: 160px 15px;
+    padding: 180px 15px;
   }
   .cases-category {
     margin-bottom: 50px;

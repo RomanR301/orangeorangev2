@@ -35,11 +35,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   // PARALLAX 
   if(window.matchMedia('(min-width: 776px)').matches){
-    var rellax = new Rellax('.rellax', {
-      center: true,
-      vertical: true,
-      horizontal: false
-    });
+    // var rellax = new Rellax('.rellax', {
+    //   center: true,
+    //   vertical: true,
+    //   horizontal: false
+    // });
     SmoothScroll({
       animationTime : 700,
       stepSize : 70,
