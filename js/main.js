@@ -55,13 +55,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
   })
   }
 
-  $('.title-item').hover(function() {
-    $(this).find('.hover').css('opacity', 1);
-    $(this).find('.default').css('opacity', 0);
-    }, function() {
-    $(this).find('.hover').css('opacity', 0);
-    $(this).find('.default').css('opacity', 1);
-  });
+  // $('.title-item').hover(function() {
+  //   $(this).find('.hover').css('opacity', 1);
+  //   $(this).find('.default').css('opacity', 0);
+  //   }, function() {
+  //   $(this).find('.hover').css('opacity', 0);
+  //   $(this).find('.default').css('opacity', 1);
+  // });
 
   $(".title-item-1").click(function(e) {
     e.preventDefault();

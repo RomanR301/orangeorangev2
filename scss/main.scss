@@ -553,12 +553,12 @@ input[type="number"] {
         left: 0;
       }
       &:hover {
-        // .default {
-        //   opacity: 0;
-        // }
-        // .hover {
-        //   opacity: 1;
-        // }
+        .default {
+          opacity: 0;
+        }
+        .hover {
+          opacity: 1;
+        }
       }
     }
     .hover {
@@ -1652,7 +1652,8 @@ input[type="number"] {
 }
 @media (max-width: 576px) {
   .navbar .container .footer-contacts .hero-screen-cta {
-    top: 42%;
+    left: -25px;
+    top: 50%;
   }
   .hero-screen-title .title-item img, .navbar .hero-screen-title .title-item img {
     height: 45px;

@@ -688,6 +688,14 @@ input[type="number"] {
   left: 0;
 }
 
+.hero-screen-title .title-item:hover .default {
+  opacity: 0;
+}
+
+.hero-screen-title .title-item:hover .hover {
+  opacity: 1;
+}
+
 .hero-screen-title .hover {
   opacity: 0;
 }
@@ -1976,7 +1984,8 @@ input[type="number"] {
 
 @media (max-width: 576px) {
   .navbar .container .footer-contacts .hero-screen-cta {
-    top: 42%;
+    left: -25px;
+    top: 50%;
   }
   .hero-screen-title .title-item img, .navbar .hero-screen-title .title-item img {
     height: 45px;
