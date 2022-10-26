@@ -198,8 +198,10 @@ body {
 
 .text-reveal.fading-up span {
   -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
           transform: translateY(0);
   -webkit-transition: 1.5s cubic-bezier(0.77, 0, 0.175, 1) 0.5s;
+  -o-transition: 1.5s cubic-bezier(0.77, 0, 0.175, 1) 0.5s;
   transition: 1.5s cubic-bezier(0.77, 0, 0.175, 1) 0.5s;
 }
 
@@ -377,6 +379,7 @@ input[type="number"] {
   -webkit-animation-delay: 1.4s;
           animation-delay: 1.4s;
   -webkit-transform: translateY(-80px);
+      -ms-transform: translateY(-80px);
           transform: translateY(-80px);
 }
 
@@ -386,6 +389,7 @@ input[type="number"] {
   -webkit-animation-delay: .4s;
           animation-delay: .4s;
   -webkit-transform: translateY(-80px);
+      -ms-transform: translateY(-80px);
           transform: translateY(-80px);
 }
 
@@ -393,6 +397,7 @@ input[type="number"] {
   -webkit-animation: none;
           animation: none;
   -webkit-transform: translateY(0px);
+      -ms-transform: translateY(0px);
           transform: translateY(0px);
 }
 
@@ -449,6 +454,7 @@ input[type="number"] {
   display: block;
   position: absolute;
   -webkit-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
   transition: all .4s ease-in-out;
 }
 
@@ -460,6 +466,7 @@ input[type="number"] {
   width: 33px;
   top: 50%;
   -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
           transform: translate(0, -50%);
 }
 
@@ -467,6 +474,7 @@ input[type="number"] {
   width: 33px;
   top: 50%;
   -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
           transform: translate(0, -50%);
 }
 
@@ -482,11 +490,13 @@ input[type="number"] {
 
 .header .hamburger.active span:nth-child(2) {
   -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
           transform: rotate(45deg);
 }
 
 .header .hamburger.active span:nth-child(3) {
   -webkit-transform: rotate(135deg);
+      -ms-transform: rotate(135deg);
           transform: rotate(135deg);
 }
 
@@ -507,6 +517,7 @@ input[type="number"] {
   background-repeat: repeat;
   background-color: #f4f4f4;
   -webkit-transition: all .6s ease-in-out;
+  -o-transition: all .6s ease-in-out;
   transition: all .6s ease-in-out;
   z-index: 99;
 }
@@ -521,6 +532,7 @@ input[type="number"] {
 
 .navbar .hero-screen-title .title-item img {
   -webkit-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
   height: 130px;
 }
@@ -557,10 +569,12 @@ input[type="number"] {
 .hero-screen .hero-screen-title .title-item img {
   display: block;
   -webkit-transform: translateY(150%);
+      -ms-transform: translateY(150%);
           transform: translateY(150%);
   -webkit-animation: reveal .8s ease-out forwards;
           animation: reveal .8s ease-out forwards;
   -webkit-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
 
@@ -621,6 +635,7 @@ input[type="number"] {
   right: 16vw;
   bottom: 25vh;
   -webkit-transition: all .5s ease-in-out;
+  -o-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
 }
 
@@ -631,11 +646,13 @@ input[type="number"] {
 
 .hero-screen-cta img {
   -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
 .hero-screen-cta:hover img {
   -webkit-transform: scale(1.15);
+      -ms-transform: scale(1.15);
           transform: scale(1.15);
 }
 
@@ -763,11 +780,13 @@ input[type="number"] {
   padding: 32px;
   border: 1px solid #222222;
   -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
 .case-item__link line {
   -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
@@ -836,6 +855,7 @@ input[type="number"] {
   position: absolute;
   width: 100%;
   -webkit-transform: scaleX(0);
+      -ms-transform: scaleX(0);
           transform: scaleX(0);
   height: 3px;
   bottom: 0;
@@ -843,18 +863,23 @@ input[type="number"] {
   background: currentcolor;
   -webkit-transition: -webkit-transform 0.4s ease-in-out;
   transition: -webkit-transform 0.4s ease-in-out;
+  -o-transition: transform 0.4s ease-in-out;
   transition: transform 0.4s ease-in-out;
   transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
   -webkit-transform: scaleX(1);
+      -ms-transform: scaleX(1);
           transform: scaleX(1);
   -webkit-transform-origin: bottom left;
+      -ms-transform-origin: bottom left;
           transform-origin: bottom left;
 }
 
 .footer-cta p:hover:before {
   -webkit-transform: scaleX(0);
+      -ms-transform: scaleX(0);
           transform: scaleX(0);
   -webkit-transform-origin: bottom right;
+      -ms-transform-origin: bottom right;
           transform-origin: bottom right;
 }
 
@@ -879,6 +904,7 @@ input[type="number"] {
   position: absolute;
   width: 100%;
   -webkit-transform: scaleX(0);
+      -ms-transform: scaleX(0);
           transform: scaleX(0);
   height: 1px;
   bottom: 0;
@@ -886,24 +912,30 @@ input[type="number"] {
   background: currentcolor;
   -webkit-transition: -webkit-transform 0.4s ease-in-out;
   transition: -webkit-transform 0.4s ease-in-out;
+  -o-transition: transform 0.4s ease-in-out;
   transition: transform 0.4s ease-in-out;
   transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
   -webkit-transform: scaleX(1);
+      -ms-transform: scaleX(1);
           transform: scaleX(1);
   -webkit-transform-origin: bottom left;
+      -ms-transform-origin: bottom left;
           transform-origin: bottom left;
 }
 
 .footer-email:hover:before {
   -webkit-transform: scaleX(0);
+      -ms-transform: scaleX(0);
           transform: scaleX(0);
   -webkit-transform-origin: bottom right;
+      -ms-transform-origin: bottom right;
           transform-origin: bottom right;
 }
 
 .footer-links__item {
   margin-right: 140px;
   -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   position: relative;
 }
@@ -913,23 +945,28 @@ input[type="number"] {
   position: absolute;
   width: 100%;
   -webkit-transform: scaleX(0);
+      -ms-transform: scaleX(0);
           transform: scaleX(0);
   height: 1px;
   bottom: -2px;
   left: 0;
   background: currentcolor;
   -webkit-transform-origin: bottom right;
+      -ms-transform-origin: bottom right;
           transform-origin: bottom right;
   -webkit-transition: -webkit-transform 0.4s ease-in-out;
   transition: -webkit-transform 0.4s ease-in-out;
+  -o-transition: transform 0.4s ease-in-out;
   transition: transform 0.4s ease-in-out;
   transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
 }
 
 .footer-links__item:hover:before {
   -webkit-transform: scaleX(1);
+      -ms-transform: scaleX(1);
           transform: scaleX(1);
   -webkit-transform-origin: bottom left;
+      -ms-transform-origin: bottom left;
           transform-origin: bottom left;
 }
 
@@ -950,6 +987,7 @@ input[type="number"] {
   max-width: 80%;
   display: block;
   -webkit-transform: translateY(100%);
+      -ms-transform: translateY(100%);
           transform: translateY(100%);
   -webkit-animation: reveal .6s ease-out forwards;
           animation: reveal .6s ease-out forwards;
@@ -989,6 +1027,7 @@ input[type="number"] {
 .case-single-meta__title span, .case-single-meta__value span {
   display: block;
   -webkit-transform: translateY(150%);
+      -ms-transform: translateY(150%);
           transform: translateY(150%);
   -webkit-animation: reveal .6s ease-out forwards;
           animation: reveal .6s ease-out forwards;
@@ -1076,6 +1115,7 @@ input[type="number"] {
   visibility: hidden;
   bottom: -100%;
   -webkit-transition: all .5s ease-in-out;
+  -o-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
 }
 
@@ -1137,6 +1177,7 @@ input[type="number"] {
   position: absolute;
   width: 100%;
   -webkit-transform: scaleX(0);
+      -ms-transform: scaleX(0);
           transform: scaleX(0);
   height: 1px;
   bottom: 0;
@@ -1144,18 +1185,23 @@ input[type="number"] {
   background: currentcolor;
   -webkit-transition: -webkit-transform 0.4s ease-in-out;
   transition: -webkit-transform 0.4s ease-in-out;
+  -o-transition: transform 0.4s ease-in-out;
   transition: transform 0.4s ease-in-out;
   transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
   -webkit-transform: scaleX(1);
+      -ms-transform: scaleX(1);
           transform: scaleX(1);
   -webkit-transform-origin: bottom left;
+      -ms-transform-origin: bottom left;
           transform-origin: bottom left;
 }
 
 .modal-header-email:hover:before {
   -webkit-transform: scaleX(0);
+      -ms-transform: scaleX(0);
           transform: scaleX(0);
   -webkit-transform-origin: bottom right;
+      -ms-transform-origin: bottom right;
           transform-origin: bottom right;
 }
 
@@ -1178,6 +1224,9 @@ input[type="number"] {
   padding: 24px;
   font-size: 24px;
   line-height: 50px;
+  color: #222222;
+  font-weight: 400;
+  font-family: inherit;
 }
 
 .form-section {
@@ -1212,6 +1261,7 @@ input[type="number"] {
 .form-checkbox input:checked ~ label:after {
   opacity: 1;
   -webkit-transform: scale(1);
+      -ms-transform: scale(1);
           transform: scale(1);
 }
 
@@ -1230,6 +1280,7 @@ input[type="number"] {
   height: 36px;
   border: 2px solid #222222;
   -webkit-transition: all 0.3s ease-out 0s;
+  -o-transition: all 0.3s ease-out 0s;
   transition: all 0.3s ease-out 0s;
   cursor: pointer;
 }
@@ -1237,6 +1288,7 @@ input[type="number"] {
 .form-checkbox label:after {
   content: '';
   -webkit-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
   position: absolute;
   left: 8px;
@@ -1245,7 +1297,10 @@ input[type="number"] {
   height: 20px;
   opacity: 0;
   -webkit-transform: scale(0);
+      -ms-transform: scale(0);
           transform: scale(0);
+  background: -webkit-linear-gradient(26.75deg, #FFE32A -5.4%, #FFAA00 40.94%, #FF4700 86.29%);
+  background: -o-linear-gradient(26.75deg, #FFE32A -5.4%, #FFAA00 40.94%, #FF4700 86.29%);
   background: linear-gradient(63.25deg, #FFE32A -5.4%, #FFAA00 40.94%, #FF4700 86.29%);
 }
 
@@ -1279,6 +1334,7 @@ input[type="number"] {
   line-height: 50px;
   color: #222222;
   -webkit-transition: all 0.3s cubic-bezier(1, -0.02, 0, 0.99) 0s;
+  -o-transition: all 0.3s cubic-bezier(1, -0.02, 0, 0.99) 0s;
   transition: all 0.3s cubic-bezier(1, -0.02, 0, 0.99) 0s;
   pointer-events: none;
 }
@@ -1358,6 +1414,7 @@ input[type="number"] {
   border: 1px solid #222222;
   padding: 32px;
   -webkit-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
   position: relative;
 }
@@ -1687,6 +1744,7 @@ input[type="number"] {
     top: 50%;
     bottom: unset;
     -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
             transform: translateY(-50%);
     right: unset;
     bottom: unset;
@@ -1848,6 +1906,7 @@ input[type="number"] {
   .case-single-text__description .text-reveal-inner, .case-single-text__description span {
     opacity: 1 !important;
     -webkit-transform: translate(0, 0) !important;
+        -ms-transform: translate(0, 0) !important;
             transform: translate(0, 0) !important;
     font-size: 22px;
     line-height: 46px;
@@ -1864,6 +1923,7 @@ input[type="number"] {
     font-weight: 600;
     opacity: 1 !important;
     -webkit-transform: translate(0, 0) !important;
+        -ms-transform: translate(0, 0) !important;
             transform: translate(0, 0) !important;
   }
   .case-single-image {
