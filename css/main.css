@@ -684,7 +684,7 @@ input[type="number"] {
 }
 
 .cases__heading {
-  margin: 200px 0 200px 0;
+  margin: 200px auto;
   width: 970px;
   font-weight: 300;
   font-size: 32px;
@@ -1037,6 +1037,10 @@ input[type="number"] {
   line-height: 50px;
 }
 
+.case-single-text__description .text-reveal-inner {
+  font-weight: 300;
+}
+
 .case-single-image {
   margin-bottom: 200px;
 }
@@ -1170,6 +1174,12 @@ input[type="number"] {
   width: 100%;
 }
 
+.modal .btn-primary {
+  padding: 24px;
+  font-size: 24px;
+  line-height: 50px;
+}
+
 .form-section {
   padding: 100px 0;
   border-top: 1px solid #222222;
@@ -1298,6 +1308,32 @@ input[type="number"] {
   line-height: 50px;
   font-family: inherit;
   color: inherit;
+  font-weight: 300;
+  border-radius: 0;
+}
+
+.form-input::-webkit-input-placeholder {
+  font-weight: 300;
+}
+
+.form-input:-ms-input-placeholder {
+  font-weight: 300;
+}
+
+.form-input::-ms-input-placeholder {
+  font-weight: 300;
+}
+
+.form-input::placeholder {
+  font-weight: 300;
+}
+
+.form-input:-ms-input-placeholder {
+  font-weight: 300;
+}
+
+.form-input::-ms-input-placeholder {
+  font-weight: 300;
 }
 
 .form-input:focus {
@@ -1622,6 +1658,9 @@ input[type="number"] {
 }
 
 @media (max-width: 767px) {
+  .hero-screen-title .title-item {
+    margin-bottom: 10px;
+  }
   .case-single-title h1 {
     max-width: 100%;
   }

@@ -569,7 +569,7 @@ input[type="number"] {
 
 .cases {
   &__heading {
-    margin: 200px 0 200px 0;
+    margin: 200px auto;
     width: 970px;
     font-weight: 300;
     font-size: 32px;
@@ -828,6 +828,9 @@ input[type="number"] {
     &__description {
       font-size: 32px;
       line-height: 50px;
+      .text-reveal-inner {
+        font-weight: 300;
+      }
     }
   }
   &-image {
@@ -926,6 +929,11 @@ input[type="number"] {
       display: block;
       width: 100%;
     }
+  }
+  .btn-primary {
+    padding: 24px;
+    font-size: 24px;
+    line-height: 50px;
   }
 }
 
@@ -1029,6 +1037,19 @@ input[type="number"] {
     line-height: 50px;
     font-family: inherit;
     color: inherit;
+    font-weight: 300;
+    border-radius: 0;
+    &::placeholder {
+      font-weight: 300;
+    }
+    
+    &:-ms-input-placeholder {
+      font-weight: 300;
+    }
+    
+    &::-ms-input-placeholder {
+      font-weight: 300;
+    }
     &:focus {
       outline: none;
     }
@@ -1371,6 +1392,9 @@ input[type="number"] {
 }
 
 @media (max-width: 767px) {
+  .hero-screen-title .title-item {
+    margin-bottom: 10px;
+  }
   .case-single-title h1 {
     max-width: 100%;
   }
