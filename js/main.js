@@ -63,25 +63,25 @@ document.addEventListener("DOMContentLoaded", function(event) {
   //   $(this).find('.default').css('opacity', 1);
   // });
 
-  $(".title-item-1").click(function(e) {
+  $(".home-page .title-item-1").click(function(e) {
     e.preventDefault();
     $('.navbar, .hamburger').removeClass('active')
     $('html,body').animate({
         scrollTop: $("#mobile-applications").offset().top - 170}, 1500);
     });
-  $(".title-item-2").click(function(e) {
+  $(".home-page .title-item-2").click(function(e) {
     e.preventDefault();
     $('.navbar, .hamburger').removeClass('active')
     $('html,body').animate({
         scrollTop: $("#web-applications").offset().top - 170}, 1500);
     });
-  $(".title-item-3").click(function(e) {
+  $(".home-page .title-item-3").click(function(e) {
     e.preventDefault();
     $('.navbar, .hamburger').removeClass('active')
     $('html,body').animate({
         scrollTop: $("#landing-pages").offset().top - 170}, 1500);
     });
-  $(".title-item-4").click(function(e) {
+  $(".home-page .title-item-4").click(function(e) {
     e.preventDefault();
     $('.navbar, .hamburger').removeClass('active')
     $('html,body').animate({
