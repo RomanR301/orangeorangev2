@@ -688,12 +688,13 @@ input[type="number"] {
   left: 0;
 }
 
-.hero-screen-title .title-item:hover .default {
-  opacity: 0;
-}
-
-.hero-screen-title .title-item:hover .hover {
-  opacity: 1;
+@media (min-width: 992px) {
+  .hero-screen-title .title-item:hover .default {
+    opacity: 0;
+  }
+  .hero-screen-title .title-item:hover .hover {
+    opacity: 1;
+  }
 }
 
 .hero-screen-title .hover {

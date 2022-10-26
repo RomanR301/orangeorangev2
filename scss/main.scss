@@ -552,12 +552,14 @@ input[type="number"] {
         top: 0;
         left: 0;
       }
-      &:hover {
-        .default {
-          opacity: 0;
-        }
-        .hover {
-          opacity: 1;
+      @media (min-width: 992px) {
+        &:hover {
+          .default {
+            opacity: 0;
+          }
+          .hover {
+            opacity: 1;
+          }
         }
       }
     }
