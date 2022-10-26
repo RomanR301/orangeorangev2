@@ -1081,6 +1081,10 @@ input[type="number"] {
   font-weight: 300;
 }
 
+.case-single-text__description span {
+  font-weight: 300;
+}
+
 .case-single-image {
   margin-bottom: 200px;
 }
