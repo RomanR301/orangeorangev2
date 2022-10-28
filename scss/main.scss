@@ -552,12 +552,14 @@ input[type="number"] {
         top: 0;
         left: 0;
       }
-      &:hover {
-        .default {
-          opacity: 0;
-        }
-        .hover {
-          opacity: 1;
+      @media (min-width: 992px) {
+        &:hover {
+          .default {
+            opacity: 0;
+          }
+          .hover {
+            opacity: 1;
+          }
         }
       }
     }
@@ -831,6 +833,9 @@ input[type="number"] {
       .text-reveal-inner {
         font-weight: 300;
       }
+      span {
+        font-weight: 300;
+      }
     }
   }
   &-image {
@@ -934,6 +939,9 @@ input[type="number"] {
     padding: 24px;
     font-size: 24px;
     line-height: 50px;
+    color: #222222;
+    font-weight: 400;
+    font-family: inherit;
   }
 }
 
@@ -1649,7 +1657,8 @@ input[type="number"] {
 }
 @media (max-width: 576px) {
   .navbar .container .footer-contacts .hero-screen-cta {
-    top: 42%;
+    left: -25px;
+    top: 50%;
   }
   .hero-screen-title .title-item img, .navbar .hero-screen-title .title-item img {
     height: 45px;

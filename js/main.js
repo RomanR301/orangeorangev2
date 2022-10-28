@@ -55,22 +55,34 @@ document.addEventListener("DOMContentLoaded", function(event) {
   })
   }
 
-  $(".title-item-1").click(function() {
+  // $('.title-item').hover(function() {
+  //   $(this).find('.hover').css('opacity', 1);
+  //   $(this).find('.default').css('opacity', 0);
+  //   }, function() {
+  //   $(this).find('.hover').css('opacity', 0);
+  //   $(this).find('.default').css('opacity', 1);
+  // });
+
+  $(".home-page .title-item-1").click(function(e) {
+    e.preventDefault();
     $('.navbar, .hamburger').removeClass('active')
     $('html,body').animate({
         scrollTop: $("#mobile-applications").offset().top - 170}, 1500);
     });
-  $(".title-item-2").click(function() {
+  $(".home-page .title-item-2").click(function(e) {
+    e.preventDefault();
     $('.navbar, .hamburger').removeClass('active')
     $('html,body').animate({
         scrollTop: $("#web-applications").offset().top - 170}, 1500);
     });
-  $(".title-item-3").click(function() {
+  $(".home-page .title-item-3").click(function(e) {
+    e.preventDefault();
     $('.navbar, .hamburger').removeClass('active')
     $('html,body').animate({
         scrollTop: $("#landing-pages").offset().top - 170}, 1500);
     });
-  $(".title-item-4").click(function() {
+  $(".home-page .title-item-4").click(function(e) {
+    e.preventDefault();
     $('.navbar, .hamburger').removeClass('active')
     $('html,body').animate({
         scrollTop: $("#websites").offset().top - 170}, 1500);
